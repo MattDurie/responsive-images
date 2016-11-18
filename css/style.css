@@ -1,0 +1,75 @@
+/* Default Size */
+* {
+    box-sizing: border-box;
+    background-color: dimgrey;
+}
+
+body {
+    margin: 0;
+    padding-right: 2rem;
+}
+
+.container {
+    margin: 1rem;
+}
+
+img,
+picture {
+    max-width: 90%;
+}
+
+ul li{
+    list-style: none;
+    background-color: #CCC;
+}
+
+ul li::after {
+    content: "";
+    display: block;
+    clear: left;
+}
+ul img {
+    float: left;
+    display: block;
+    margin: 10px 1rem 1rem 1rem;
+}
+
+/* First Break Point */
+@media screen and (min-width: 600px) and (max-width: 1200px){
+    
+    ul li::after {
+        content: "";
+        display: block;
+        clear: left;
+    }
+    
+    img{
+        float: left;
+        display: inline;
+        width: calc(50% - 2rem);
+    }
+    
+    ul li {
+        margin: 10px 1rem 1rem 1rem;
+    }
+}
+
+/* Second Break Point */
+@media screen and (min-width: 1200px){
+    
+    ul li::after {
+        content: "";
+        display: block;
+        clear: left;
+    }
+    
+    img{
+        float: left;
+        display: inline;
+        width: calc(25% - 2rem);
+    }
+    
+    ul li {
+        margin: 1rem 1rem 1rem 1rem;
+    }
+}
